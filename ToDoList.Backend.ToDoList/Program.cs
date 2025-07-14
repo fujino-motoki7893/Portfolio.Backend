@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using ToDoList.Controllers;
-using ToDoList.Models.DbContexts;
+using ToDoList.Backend.ToDoList.Controllers;
+using ToDoList.Backend.ToDoList.Models.DbContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 

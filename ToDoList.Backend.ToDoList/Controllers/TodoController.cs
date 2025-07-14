@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ToDoList.Models.DbContexts;
+using ToDoList.Backend.ToDoList.Models.DbContexts;
 using ToDoList.Backend.ToDoList.Models.Entities;
 
-namespace ToDoList.Controllers
+namespace ToDoList.Backend.ToDoList.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
