@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ToDoList.Models.DbContexts;
+using ToDoList.Backend.ToDoList.Models.DbContexts;
 
 #nullable disable
 
-namespace ToDoList.Migrations
+namespace ToDoList.Backend.ToDoList.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250402064726_Initial")]

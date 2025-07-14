@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ToDoList.Migrations
+namespace ToDoList.Backend.ToDoList.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
