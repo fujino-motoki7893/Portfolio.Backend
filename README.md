@@ -17,4 +17,10 @@ ToDoList のバックエンドリポジトリです。
 - `docker build -t to-do-list-backend .`
 - `docker-compose up -d`
 
-それぞれのDBツールでアクセスする
+# Develop
+
+## Nitro 立ち上げ
+- `http://localhost:5142/graphql`
+
+## Swagger 立ち上げ
+- `http://localhost:5142/swagger`
