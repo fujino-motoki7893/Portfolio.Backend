@@ -1,6 +1,6 @@
 using ToDoList.Backend.ToDoList.Domains.DTOs;
 using ToDoList.Backend.ToDoList.Models.Entities;
-using ToDoList.Domains.DTOs;
+using ToDoList.Backend.ToDoList.Domains.DTOs;
 using ToDoList.Backend.ToDoList.Models.DbContexts;
 
 namespace ToDoList.Backend.ToDoList.Controllers
