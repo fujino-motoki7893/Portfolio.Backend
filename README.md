@@ -17,8 +17,3 @@ ToDoList のバックエンドリポジトリです。
 
 ## Swagger 立ち上げ
 - `http://localhost:5142/swagger`
-
-# DB を立ち上げる方法（立ち上げなくてもCRUD操作はできる、Docker ではまだできない）
-- `cd .\ToDoList\`
-- `docker build -t to-do-list-backend .`
-- `docker-compose up -d`
