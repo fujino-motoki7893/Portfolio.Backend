@@ -1,9 +1,8 @@
-using ToDoList.Backend.ToDoList.Domains.DTOs;
-using ToDoList.Backend.ToDoList.Models.Entities;
-using ToDoList.Backend.ToDoList.Domains.DTOs;
-using ToDoList.Backend.ToDoList.Models.DbContexts;
+using ToDoList.Domains.DTOs;
+using ToDoList.Models.DbContexts;
+using ToDoList.Models.Entities;
 
-namespace ToDoList.Backend.ToDoList.Controllers
+namespace ToDoList.Controllers
 {
     /// <summary>
     /// ミューテーションクラス

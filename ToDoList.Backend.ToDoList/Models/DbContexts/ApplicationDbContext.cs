@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ToDoList.Backend.ToDoList.Models.Entities;
+using ToDoList.Models.Entities;
 
-namespace ToDoList.Backend.ToDoList.Models.DbContexts
+namespace ToDoList.Models.DbContexts
 {
     /// <summary>
     /// ApplicationDbContextクラス

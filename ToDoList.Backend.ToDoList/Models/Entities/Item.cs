@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ToDoList.Backend.ToDoList.Models.Entities
+namespace ToDoList.Models.Entities
 {
     /// <summary>
     /// テストのためのItemクラス

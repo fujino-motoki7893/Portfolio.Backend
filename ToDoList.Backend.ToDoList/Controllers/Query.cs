@@ -1,9 +1,7 @@
-using System.Linq;
-using HotChocolate;
-using ToDoList.Backend.ToDoList.Models.Entities;
-using ToDoList.Backend.ToDoList.Models.DbContexts;
+using ToDoList.Models.DbContexts;
+using ToDoList.Models.Entities;
 
-namespace ToDoList.Backend.ToDoList.Controllers
+namespace ToDoList.Controllers
 {
     /// <summary>
     /// クエリクラス

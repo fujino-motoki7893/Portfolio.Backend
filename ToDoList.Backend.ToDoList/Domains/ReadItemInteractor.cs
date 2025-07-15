@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using ToDoList.Backend.ToDoList.Models.DbContexts;
-using ToDoList.Backend.ToDoList.Usecases;
-using ToDoList.Backend.ToDoList.Models.Entities;
+using ToDoList.Models.DbContexts;
+using ToDoList.Models.Entities;
+using ToDoList.Usecases;
 
-namespace ToDoList.Backend.ToDoList.Domains
+namespace ToDoList.Domains
 {
     /// <summary>
     ///  ToDo を取得するためのインタラクタ

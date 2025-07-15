@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ToDoList.Backend.ToDoList.Models.DbContexts;
+using ToDoList.Models.DbContexts;
 
 #nullable disable
 
