@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Backend.ToDoList.Controllers;
 using ToDoList.Backend.ToDoList.Models.DbContexts;
+using ToDoList.Backend.ToDoList.Domains;
+using ToDoList.Backend.ToDoList.Usecases;
 
 namespace ToDoList.Backend.ToDoList
 {
@@ -20,6 +22,9 @@ namespace ToDoList.Backend.ToDoList
             // サービスの登録
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite("Data Source=conferences.db"));
+
+            // ユースケースを登録
+            builder.Services.AddScoped<IReadItemUsecase, ReadItemInteractor>();
 
             // REST API用のサービスを追加
             builder.Services.AddControllers();

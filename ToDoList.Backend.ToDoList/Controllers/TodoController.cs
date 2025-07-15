@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Backend.ToDoList.Models.DbContexts;
 using ToDoList.Backend.ToDoList.Models.Entities;
+using ToDoList.Backend.ToDoList.Domains;
 using ToDoList.Backend.ToDoList.Domains.DTOs;
+using ToDoList.Backend.ToDoList.Usecases;
 
 namespace ToDoList.Backend.ToDoList.Controllers
 {
@@ -11,19 +14,28 @@ namespace ToDoList.Backend.ToDoList.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
-    public class TodoController(ApplicationDbContext context) : ControllerBase
+    public class TodoController(ApplicationDbContext context, IReadItemUsecase readItemUsecase) : ControllerBase
     {
         private readonly ApplicationDbContext _context = context;
+        private readonly IReadItemUsecase _readItemUsecase = readItemUsecase;
 
         /// <summary>
         ///  ToDo を取得する
         /// </summary>
         /// <returns>ToDo </returns>
         [HttpGet]
-        public async Task<IActionResult> GetTodos()
+        public async Task<IActionResult> Get()
         {
-            var items = await _context.Items.ToListAsync();
-            return Ok(items);
+            try
+            {
+                var items = await _readItemUsecase.GetTodos();
+                return Ok(items);
+            }
+            catch (Exception ex)
+            {
+                // ログ出力
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         /// <summary>
