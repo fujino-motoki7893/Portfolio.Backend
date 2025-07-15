@@ -7,20 +7,18 @@ ToDoList のバックエンドリポジトリです。
 2. `cd ToDoList.Backend` で project がある階層に移動します。
 3. `dotnet restore` をします。
 
+# Develop
 
 ## ローカルで立ち上げるcommand
-- `dotnet run --project ToDoList`
-- [ローカルホスト](http://localhost:5142/graphql/)にアクセス
-
-# DB を立ち上げる方法
-- `cd .\ToDoList\`
-- `docker build -t to-do-list-backend .`
-- `docker-compose up -d`
-
-# Develop
+- `dotnet run --project TodoList.Backend.ToDoList`
 
 ## Nitro 立ち上げ
 - `http://localhost:5142/graphql`
 
 ## Swagger 立ち上げ
 - `http://localhost:5142/swagger`
+
+# DB を立ち上げる方法（立ち上げなくてもCRUD操作はできる、Docker ではまだできない）
+- `cd .\ToDoList\`
+- `docker build -t to-do-list-backend .`
+- `docker-compose up -d`
