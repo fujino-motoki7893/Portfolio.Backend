@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using ToDoList.Backend.ToDoList.Controllers;
-using ToDoList.Backend.ToDoList.Models.DbContexts;
-using ToDoList.Backend.ToDoList.Domains;
-using ToDoList.Backend.ToDoList.Usecases;
+using ToDoList.Controllers;
+using ToDoList.Domains;
+using ToDoList.Models.DbContexts;
+using ToDoList.Usecases;
 
-namespace ToDoList.Backend.ToDoList
+namespace ToDoList
 {
     /// <summary>
     /// プログラムのエントリーポイント

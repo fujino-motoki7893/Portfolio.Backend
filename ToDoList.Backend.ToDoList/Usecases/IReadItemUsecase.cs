@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using ToDoList.Backend.ToDoList.Models.Entities;
+using ToDoList.Models.Entities;
 
-namespace ToDoList.Backend.ToDoList.Usecases
+namespace ToDoList.Usecases
 {
     /// <summary>
     ///  ToDo を取得するためのユースケース

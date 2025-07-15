@@ -1,13 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using ToDoList.Backend.ToDoList.Models.DbContexts;
-using ToDoList.Backend.ToDoList.Models.Entities;
-using ToDoList.Backend.ToDoList.Domains;
-using ToDoList.Backend.ToDoList.Domains.DTOs;
-using ToDoList.Backend.ToDoList.Usecases;
+using ToDoList.Domains.DTOs;
+using ToDoList.Models.DbContexts;
+using ToDoList.Models.Entities;
+using ToDoList.Usecases;
 
-namespace ToDoList.Backend.ToDoList.Controllers
+namespace ToDoList.Controllers
 {
     /// <summary>
     ///  ToDoList のコントローラクラス
@@ -31,7 +28,7 @@ namespace ToDoList.Backend.ToDoList.Controllers
                 var items = await _readItemUsecase.GetTodos();
                 return Ok(items);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // ログ出力
                 return StatusCode(500, "Internal server error");

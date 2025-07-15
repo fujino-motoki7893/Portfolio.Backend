@@ -1,4 +1,4 @@
-namespace ToDoList.Backend.ToDoList.Domains.DTOs
+namespace ToDoList.Domains.DTOs
 {
     /// <summary>
     ///  AddItemInputクラス
