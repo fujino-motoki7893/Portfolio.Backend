@@ -9,10 +9,10 @@ ToDoList のバックエンドリポジトリです。
 
 
 ## ローカルで立ち上げるcommand
-- `dotnet run --project ToDoList`
+- `dotnet run --project TodoList.Backend.ToDoList`
 - [ローカルホスト](http://localhost:5142/graphql/)にアクセス
 
-# DB を立ち上げる方法
+# DB を立ち上げる方法（立ち上げなくてもCRUD操作はできる、Docker ではまだできない）
 - `cd .\ToDoList\`
 - `docker build -t to-do-list-backend .`
 - `docker-compose up -d`
