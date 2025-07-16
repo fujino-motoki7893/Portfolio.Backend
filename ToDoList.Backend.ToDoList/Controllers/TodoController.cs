@@ -21,18 +21,10 @@ namespace ToDoList.Controllers
         /// </summary>
         /// <returns>ToDo </returns>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<ReadTodoPayload> Get()
         {
-            try
-            {
-                var items = await _readItemUsecase.GetTodos();
-                return Ok(items);
-            }
-            catch (Exception)
-            {
-                // ログ出力
-                return StatusCode(500, "Internal server error");
-            }
+            var items = await _readItemUsecase.GetTodos();
+            return items;
         }
 
         /// <summary>
