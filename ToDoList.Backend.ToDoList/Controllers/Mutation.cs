@@ -28,9 +28,6 @@ namespace ToDoList.Controllers
             context.Items.Add(item);
             await context.SaveChangesAsync();
 
-            // TODO: 処理をインタラクタに切り出す
-            // TODO: マッパープロファイルを作成して、マッピングを行う
-            // TODO: 例外処理を行う
             return new AddItemPayload
             {
                 Item = new ItemDTO 

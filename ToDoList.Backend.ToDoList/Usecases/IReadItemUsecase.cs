@@ -1,4 +1,4 @@
-using ToDoList.Models.Entities;
+using ToDoList.Domains.DTOs;
 
 namespace ToDoList.Usecases
 {
@@ -10,6 +10,6 @@ namespace ToDoList.Usecases
         /// <summary>
         ///  ToDo を取得する
         /// </summary>
-        public Task<List<Item>> GetTodos();
+        public Task<ReadTodoPayload> GetTodos();
     }
 }

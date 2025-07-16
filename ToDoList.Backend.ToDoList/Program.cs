@@ -7,6 +7,7 @@ using ToDoList.Models;
 using ToDoList.Models.DbContexts;
 using ToDoList.Usecases;
 using ToDoList.Services;
+using ToDoList.Profiles;
 
 namespace ToDoList
 {
@@ -22,6 +23,9 @@ namespace ToDoList
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // AutoMapperの登録
+            builder.Services.AddAutoMapper(typeof(MappingProfile));
 
             // 設定の読み込み
             builder.Services.Configure<AWSSettings>(builder.Configuration.GetSection("AWS"));
