@@ -4,7 +4,7 @@ using ToDoList.Models.Entities;
 namespace ToDoList.Controllers
 {
     /// <summary>
-    /// クエリクラス
+    /// クエリクラス（GraphQL用）
     /// </summary>
     public class Query
     {

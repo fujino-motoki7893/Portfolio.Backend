@@ -17,3 +17,6 @@ ToDoList のバックエンドリポジトリです。
 
 ## Swagger 立ち上げ
 - `http://localhost:5142/swagger`
+
+# DynamoDB への操作について
+- `ItemController`がありますが、現状まだ操作を許可していません。
