@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>4fad1673-e3ff-431f-9bfd-c7c7ad86cd23</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +20,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.2.3" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="4.0.2" />
   </ItemGroup>
 
 </Project>

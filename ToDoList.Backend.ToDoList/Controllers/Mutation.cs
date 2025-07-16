@@ -5,7 +5,7 @@ using ToDoList.Models.Entities;
 namespace ToDoList.Controllers
 {
     /// <summary>
-    /// ミューテーションクラス
+    /// ミューテーションクラス（GraphQL用）
     /// </summary>
     public class Mutation
     {

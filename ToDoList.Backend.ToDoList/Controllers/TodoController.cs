@@ -7,7 +7,7 @@ using ToDoList.Usecases;
 namespace ToDoList.Controllers
 {
     /// <summary>
-    ///  ToDoList のコントローラクラス
+    ///  ToDoList のコントローラクラス（REST用）
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
