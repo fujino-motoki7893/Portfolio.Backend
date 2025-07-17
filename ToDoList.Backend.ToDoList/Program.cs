@@ -70,7 +70,19 @@ namespace ToDoList
                 .AddQueryType<Query>()
                 .AddMutationType<Mutation>();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+
             var app = builder.Build();
+
+            app.UseCors();
 
             // Swagger設定（開発環境のみ）
             if (app.Environment.IsDevelopment())
