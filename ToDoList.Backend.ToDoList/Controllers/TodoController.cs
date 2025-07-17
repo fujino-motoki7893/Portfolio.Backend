@@ -11,10 +11,10 @@ namespace ToDoList.Controllers
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
-    public class TodoController(ApplicationDbContext context, IReadItemUsecase readItemUsecase) : ControllerBase
+    public class TodoController(ApplicationDbContext context, IReadTodoUsecase readTodoUsecase) : ControllerBase
     {
         private readonly ApplicationDbContext _context = context;
-        private readonly IReadItemUsecase _readItemUsecase = readItemUsecase;
+        private readonly IReadTodoUsecase _readTodoUsecase = readTodoUsecase;
 
         /// <summary>
         ///  ToDo を取得する
@@ -23,8 +23,7 @@ namespace ToDoList.Controllers
         [HttpGet]
         public async Task<ReadTodoPayload> Get()
         {
-            var items = await _readItemUsecase.GetTodos();
-            return items;
+            return await _readTodoUsecase.GetTodos();
         }
 
         /// <summary>

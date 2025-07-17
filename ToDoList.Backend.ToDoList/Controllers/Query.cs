@@ -1,5 +1,5 @@
-using ToDoList.Models.DbContexts;
-using ToDoList.Models.Entities;
+using ToDoList.Domains.DTOs;
+using ToDoList.Usecases;
 
 namespace ToDoList.Controllers
 {
@@ -11,7 +11,6 @@ namespace ToDoList.Controllers
         /// <summary>
         /// アイテムを取得するメソッド
         /// </summary>
-        public IQueryable<Item> GetItems([Service] ApplicationDbContext context) =>
-            context.Items;
+        public Task<ReadTodoPayload> Get([Service] IReadTodoUsecase usecase) => usecase.GetTodos();
     }
 }

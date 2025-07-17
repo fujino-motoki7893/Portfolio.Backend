@@ -8,6 +8,8 @@ using ToDoList.Models.DbContexts;
 using ToDoList.Usecases;
 using ToDoList.Services;
 using ToDoList.Profiles;
+using ToDoList.Infrastructures;
+using ToDoList.Infrastructures.Interface;
 
 namespace ToDoList
 {
@@ -52,8 +54,11 @@ namespace ToDoList
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite("Data Source=conferences.db"));
 
+            // リポジトリを登録
+            builder.Services.AddScoped<IReadItemRepository, ReadItemRepository>();
+
             // ユースケースを登録
-            builder.Services.AddScoped<IReadItemUsecase, ReadItemInteractor>();
+            builder.Services.AddScoped<IReadTodoUsecase, ReadTodoInteractor>();
 
             // REST API用のサービスを追加
             builder.Services.AddControllers();
