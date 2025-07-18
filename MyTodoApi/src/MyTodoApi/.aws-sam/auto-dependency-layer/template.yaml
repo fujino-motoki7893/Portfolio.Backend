@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: My C# Todo API
+Globals:
+  Function:
+    Timeout: 30
+    Runtime: dotnet8
+    Architectures:
+    - x86_64
+Resources:
+  MyTodoApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: MyTodoApiFunction
+      Handler: MyTodoApi::MyTodoApi.LambdaEntryPoint::FunctionHandlerAsync
+      Runtime: dotnet8
+      Events:
+        ProxyResource:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+        RootResource:
+          Type: Api
+          Properties:
+            Path: /
+            Method: ANY
+    Metadata:
+      SamResourceId: MyTodoApiFunction
+Outputs:
+  MyTodoApi:
+    Description: API Gateway endpoint URL for Prod environment
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/
