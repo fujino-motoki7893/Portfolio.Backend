@@ -1,6 +1,6 @@
-# ToDoList.Backend
+# Portfolio.Backend
 
-ToDoList のバックエンドリポジトリです。
+Portfolio のバックエンドリポジトリです。
 
 1. dotnet フレームワークの dotnet8 をインストールする。
     - [ここ](https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0)からインストールしてください(mac windows それぞれ方法が違うので注意)
